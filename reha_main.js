@@ -46,3 +46,26 @@ console.log(hero);
 document.getElementById("bag").addEventListener("click", function(){
     equipWeapon(hero);
 })
+
+let displayStats = function(){
+    var heroStats = document.createElement("div");
+    
+    var heroName = document.createTextNode(`Hero Name :  ${hero.name}`);
+    heroStats.appendChild(heroName);
+
+    var heroHealth = document.createTextNode(`Hero Health : ${hero.health}`);
+    heroStats.appendChild(heroHealth);
+
+    var heroWeaponType = document.createTextNode(`Weapon Type: ${hero.weapon.type}`);
+    heroStats.appendChild(heroWeaponType);
+
+    var heroWeaponDamage = document.createTextNode(`Weapon Damage: ${hero.weapon.damage}`);
+    heroStats.appendChild(heroWeaponDamage);
+
+    document.body.appendChild(heroStats);
+
+//health, weapontype, weapon damage
+
+};
+
+displayStats();
