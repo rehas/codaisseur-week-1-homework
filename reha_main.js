@@ -42,3 +42,7 @@ document.getElementById("dagger").addEventListener("click", function(){
     pickUpItem(hero, dagger);
 });
 console.log(hero);
+
+document.getElementById("bag").addEventListener("click", function(){
+    equipWeapon(hero);
+})
