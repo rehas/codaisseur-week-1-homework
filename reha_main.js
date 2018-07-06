@@ -10,3 +10,7 @@ hero.weapon = {
     type: "Ember Sword",
     damage : 2
 }
+
+let rest = function(){};
+let pickUpItem = function(){};
+let equipWeapon = function(){};
