@@ -18,7 +18,15 @@ let rest = function(character){
 let pickUpItem = function(character, item){
     character.inventory.push(item);
 };
-let equipWeapon = function(){};
+let equipWeapon = function(character){
+
+    if (character.inventory.length === 0){
+        return
+    }else{
+        character.weapon = character.inventory[0];
+    }
+
+};
 
 document.getElementById("inn").addEventListener("click", function(){
     console.log("Img with id inn clicked");
@@ -33,3 +41,4 @@ document.getElementById("dagger").addEventListener("click", function(){
     }
     pickUpItem(hero, dagger);
 });
+console.log(hero);
