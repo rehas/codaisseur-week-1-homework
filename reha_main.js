@@ -11,6 +11,9 @@ hero.weapon = {
     damage : 2
 }
 
-let rest = function(){};
+let rest = function(character){
+    character.health = 10;
+    return character
+};
 let pickUpItem = function(){};
 let equipWeapon = function(){};
