@@ -17,3 +17,8 @@ let rest = function(character){
 };
 let pickUpItem = function(){};
 let equipWeapon = function(){};
+
+document.getElementById("inn").addEventListener("click", function(){
+    console.log("Img with id inn clicked");
+    rest(hero);
+});
