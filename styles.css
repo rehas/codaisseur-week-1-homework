@@ -3,3 +3,7 @@ img{
     height: 200px;
     margin: 0 20px;
 }
+
+#fight-enemy:hover{
+    cursor: crosshair;
+}

@@ -101,4 +101,42 @@ document.getElementById("change-hero-name").addEventListener("click", function(e
     changeHeroName();
 })
 
+let fightEnemy = function(){
+
+    if(hero.health <= 3){
+        alert("Please rest your hero by clicking inn image with towers\nYour Hero has fought enough!");
+        return false
+    }    
+
+    console.log("Fight Began");
+
+    var elem = document.getElementById("main");
+    var pElem = document.createElement("p");
+    pElem.appendChild(document.createTextNode("Fighting, estimated duration 2 seconds!"));
+    pElem.style.color = "blue";
+    elem.appendChild(pElem);
+    
+    setTimeout(function(){
+        hero.health -=3;
+        var elem = document.getElementById("main");
+        var pElem = document.createElement("p");
+        pElem.style.color = "red";
+        pElem.appendChild(document.createTextNode("Fought And WON!"))
+        elem.appendChild(pElem);
+
+        displayStats();
+    }, 2000);
+
+    return true
+}
+
+document.getElementById("fight-enemy").onclick = function(event){
+    if (!fightEnemy()){
+        return
+    };
+    console.log(event.target);
+    document.getElementById("fight-enemy").removeChild(event.target);
+    displayStats();
+}
+
 displayStats();
