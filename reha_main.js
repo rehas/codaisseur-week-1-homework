@@ -1,7 +1,7 @@
 // Write your JS here
 console.log("I'm working as a file with new name!");
 
-let hero = {};
+const hero = {};
 hero.name = "Ember Spirit";
 hero.heroic = true;
 hero.inventory = [];
@@ -31,6 +31,7 @@ let equipWeapon = function(character){
 document.getElementById("inn").addEventListener("click", function(){
     console.log("Img with id inn clicked");
     rest(hero);
+    displayStats();
 });
 
 document.getElementById("dagger").addEventListener("click", function(){
@@ -40,15 +41,26 @@ document.getElementById("dagger").addEventListener("click", function(){
         damage : 2
     }
     pickUpItem(hero, dagger);
+    displayStats();
 });
 console.log(hero);
 
 document.getElementById("bag").addEventListener("click", function(){
     equipWeapon(hero);
+    displayStats();
 })
 
 let displayStats = function(){
+
+    console.log(document.getElementById("hero-stats") === null);
+
+    if (document.getElementById("hero-stats") !== null){
+        document.getElementById("main")
+            .removeChild(document.getElementById("hero-stats"));
+    }
+
     var heroStats = document.createElement("div");
+    heroStats.id = "hero-stats";
     
 
     var heroName = document.createTextNode(`Hero Name :  ${hero.name}`);
@@ -72,5 +84,21 @@ let displayStats = function(){
 //health, weapontype, weapon damage
 
 };
+
+let changeHeroName = function(){
+    
+    console.log(document.getElementById("heroName").value);
+    let newName = document.getElementById("heroName").value;
+
+    hero.name = newName;
+    displayStats();
+    console.log(hero);
+
+}
+
+document.getElementById("change-hero-name").addEventListener("click", function(event){
+    event.preventDefault();
+    changeHeroName();
+})
 
 displayStats();

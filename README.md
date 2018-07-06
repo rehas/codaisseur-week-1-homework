@@ -1,5 +1,10 @@
 # Beginner Bootcamp Homework
 
+# ChangeLog
+
+While updating hero name, the displayStats() function added a new div.
+So I want to check if there's a current div and remove it if there is.
+
 Hello beginner bootcampers. Here is your first formal homework  assignment!
 
 
