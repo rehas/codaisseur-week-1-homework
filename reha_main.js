@@ -24,3 +24,12 @@ document.getElementById("inn").addEventListener("click", function(){
     console.log("Img with id inn clicked");
     rest(hero);
 });
+
+document.getElementById("dagger").addEventListener("click", function(){
+    console.log("Img with id dagger");
+    let dagger = {
+        type: "dagger",
+        damage : 2
+    }
+    pickUpItem(hero, dagger);
+});
