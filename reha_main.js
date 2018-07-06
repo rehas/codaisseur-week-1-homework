@@ -15,7 +15,9 @@ let rest = function(character){
     character.health = 10;
     return character
 };
-let pickUpItem = function(){};
+let pickUpItem = function(character, item){
+    character.inventory.push(item);
+};
 let equipWeapon = function(){};
 
 document.getElementById("inn").addEventListener("click", function(){
