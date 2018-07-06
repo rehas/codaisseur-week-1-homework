@@ -50,19 +50,24 @@ document.getElementById("bag").addEventListener("click", function(){
 let displayStats = function(){
     var heroStats = document.createElement("div");
     
+
     var heroName = document.createTextNode(`Hero Name :  ${hero.name}`);
     heroStats.appendChild(heroName);
+    heroStats.appendChild(document.createElement("br"));    
 
     var heroHealth = document.createTextNode(`Hero Health : ${hero.health}`);
     heroStats.appendChild(heroHealth);
+    heroStats.appendChild(document.createElement("br"));    
 
     var heroWeaponType = document.createTextNode(`Weapon Type: ${hero.weapon.type}`);
     heroStats.appendChild(heroWeaponType);
+    heroStats.appendChild(document.createElement("br"));    
 
     var heroWeaponDamage = document.createTextNode(`Weapon Damage: ${hero.weapon.damage}`);
     heroStats.appendChild(heroWeaponDamage);
+    heroStats.appendChild(document.createElement("br"));    
 
-    document.body.appendChild(heroStats);
+    document.getElementById("main").appendChild(heroStats);
 
 //health, weapontype, weapon damage
 
